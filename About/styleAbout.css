@@ -1,6 +1,8 @@
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f5f5f5;
+	background-image: url(../img/background.jpg);
+	background-size: cover;
 }
 
 h1 {
@@ -12,7 +14,7 @@ h1 {
 header {
 	background-color: #000000;
 	color: #fff;
-	padding: 10px;
+	padding: 30px;
 }
 
 nav ul {
@@ -37,7 +39,7 @@ nav ul li a {
 	align-items: center;
 	margin: 20px;
 	padding: 20px;
-	background-color: white;
+	background-color: rgb(0, 0, 0);
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	border-radius: 10px;
 	width: 300px;
@@ -52,11 +54,13 @@ nav ul li a {
 }
 
 .person h2 {
+	color: #fff;
 	font-size: 24px;
 	margin-bottom: 10px;
 }
 
 .person p {
+	color: #fff;
 	font-size: 18px;
 	text-align: center;
 }
@@ -67,4 +71,15 @@ nav ul li a {
 	align-items: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
+}
+
+footer {
+	color: #ffffff;
+	font-size: 14px;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #000000;
+	padding: 10px;
 }
