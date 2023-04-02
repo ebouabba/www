@@ -1,35 +1,76 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Cookies</title>
-	<link rel="stylesheet" type="text/css" href="styleCookies.css">
+	<title>Test Cookie</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		#cookie-banner {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 10px;
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			display: none;
+		}
+		
+		#cookie-banner.show {
+			display: block;
+		}
+		
+		#cookie-banner button {
+			background-color: #fff;
+			color: #333;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
 </head>
-
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="../index.html">Home</a></li>
-				<li><a href="../About/about.html">About</a></li>
-				<li><a href="../Contact/contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="container">
-		<form>
-			<label for="first-name">First Name:</label>
-			<input type="text" id="first-name" name="first-name" required>
-
-			<label for="last-name">Last Name:</label>
-			<input type="text" id="last-name" name="last-name" required>
-
-			<button type="submit">Submit</button>
-		</form>
+	<div id="cookie-banner">
+		<p>We use cookies to ensure you get the best experience on our website. By continuing to use our site, you consent to our use of cookies.</p>
+		<button onclick="acceptCookies()">Accept</button>
 	</div>
-	<footer>
-		<p align="center">&copy; Copyright</p>
-	</footer>
-</body>
+	
+	<h1>Welcome to our website!</h1>
+	
+	<script>
+		function setCookie(name, value, days) {
+			var expires = "";
+			if (days) {
+				var date = new Date();
+				date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+				expires = "; expires=" + date.toUTCString();
+			}
+			document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+		}
 
+		function getCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+				var c = ca[i];
+				while (c.charAt(0)==' ') c = c.substring(1,c.length);
+				if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+
+		function acceptCookies() {
+			setCookie('accepted-cookies', 'true', 365);
+			document.getElementById('cookie-banner').classList.remove('show');
+		}
+
+		if (getCookie('accepted-cookies') != 'true') {
+			document.getElementById('cookie-banner').classList.add('show');
+		}
+	</script>
+</body>
 </html>
