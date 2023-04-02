@@ -1,75 +1,65 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  /* background-image: url(../img/background.jpg); */
-	background-size: cover;
-}
-
-header {
-  background-color: #000000;
-  color: #fff;
-  padding: 30px;
-
-}
-
-h1 {
-  text-align: center;
-  margin-top: 30px;
-}
-
-nav ul {
-	list-style: none;
+*{
 	margin: 0;
 	padding: 0;
 }
 
-nav ul li {
-	display: inline-block;
-	margin-right: 10px;
-}
-
-nav ul li a {
-	color: #fff;
-	text-decoration: none;
-}
-
-.container {
-  margin: 50px auto;
-  max-width: 500px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-input[type="text"] {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-button[type="submit"] {
-  padding: 10
-}
-
-footer {
-	color: #ffffff;
-	font-size: 14px;
-	text-align: center;
-	position: fixed;
-	bottom: 0;
+.main{
 	width: 100%;
-	background-color: #000000;
-	padding: 10px;
+	background: linear-gradient(to top, rgba(0,0,0,0.7)50%,rgba(0,0,0,0.7)50%), url(../IMG/Stars.jpg.webp);
+	background-position: center;
+	background-size: cover;
+	height: 109vh;
+}
+
+.navbar {
+	width: 1200px;
+	height: 75px;
+	margin: auto;
+}
+
+.icon {
+	width: 200px;
+	float: left;
+	height: 70px;
+}
+
+.logo {
+	color:  rgb(190, 171, 47);
+	font-size: 35px;
+	font-family: Arial;
+	padding-left: 20px;
+	float: left;
+	padding-top: 10px;
+}
+
+.menu {
+	width:  400px;
+	float: left;
+	height: 70px;
+}
+
+ul{
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul li{
+	list-style: none;
+	margin-left:  62px;
+	margin-top: 27px;
+	font-size: 14px; 
+}
+
+ul li a{
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	font-family: Arial;
+	font-weight: bold;
+	transition: 0.4s ease-in-out;
+}
+
+ul li a:hover{
+	color:  rgb(190, 171, 47);
 }
