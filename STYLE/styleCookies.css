@@ -65,55 +65,43 @@ ul li a:hover{
 }
 
 .container {
-	margin: 50px auto;
-	max-width: 500px;
-	padding: 20px;
-	color: aliceblue;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  form {
-	display: flex;
-	flex-direction: column;
-  }
-  
-  label {
-	font-weight: bold;
-	margin-bottom: 10px;
-  }
-  
-  input[type="text"] {
-	padding: 10px;
-	margin-bottom: 20px;
-	border: none;
-	border-radius: 5px;
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  button[type="submit"] {
-	padding: 20
-
-  }
-
-/* form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: aliceblue;
-  }
-  
-
-  
-  button[type="submit"] {
-	padding: 10px 20px;
-	background-color: rgb(190, 171, 47);
-	color: white;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+  margin: 50px auto;
+  max-width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(190, 171, 47);
+  color: aliceblue;
 }
 
-button[type="submit"]:hover {
-	  background-color: #4CAF50;
-  } */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"] {
+  padding: 10
+}
+
+
+.cok {
+	color: aliceblue;
+	display: flex;
+	flex-direction: column;
+
+}
